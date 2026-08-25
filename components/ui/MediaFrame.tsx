@@ -57,7 +57,7 @@ export function MediaFrame({
 
         {showImage ? (
           <Image
-            src={src!}
+            src={withBasePath(src)!}
             alt={alt}
             fill
             sizes={sizes}
