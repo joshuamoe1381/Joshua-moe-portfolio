@@ -1,0 +1,30 @@
+export const homeCapabilities = [
+  "Creative Direction",
+  "Brand Strategy",
+  "Art Direction",
+  "Content Strategy",
+  "Campaign Concepts",
+  "Video Production",
+  "Digital Campaigns",
+  "Social Content",
+  "Graphic Design",
+  "Photography",
+  "Website Builds",
+  "Paid Media Creative",
+  "Email Marketing",
+  "Client Partnership",
+  "Team Leadership",
+] as const;
+
+export const aboutCapabilityWall = [
+  "Creative Direction",
+  "Brand Strategy",
+  "Art Direction",
+  "Content Systems",
+  "Digital Campaigns",
+  "Video Production",
+  "Photography",
+  "Design",
+  "Web",
+  "Leadership",
+] as const;
