@@ -1,4 +1,5 @@
 import { brands } from "@/data/brands";
+import { withBasePath } from "@/lib/base-path";
 
 function LogoRow({ hidden }: { hidden?: boolean }) {
   return (
@@ -11,7 +12,7 @@ function LogoRow({ hidden }: { hidden?: boolean }) {
           {/* Logos are pre-converted white PNGs; native img avoids next/image SVG hydration issues. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={brand.logo}
+            src={withBasePath(brand.logo)}
             alt={hidden ? "" : brand.name}
             className="h-full w-auto max-w-[10.5rem] object-contain"
           />

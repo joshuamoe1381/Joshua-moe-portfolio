@@ -5,6 +5,7 @@ import { useCursor } from "@/components/motion/CursorProvider";
 import { MediaFrame } from "@/components/ui/MediaFrame";
 import { getProjectHref, type Project } from "@/data/projects";
 import { cn } from "@/lib/cn";
+import { withBasePath } from "@/lib/base-path";
 
 export function WorkTile({
   project,
@@ -40,7 +41,7 @@ export function WorkTile({
           {/* SVG wordmarks stay on <img> to avoid next/image hydration mismatches. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={logoSrc}
+            src={withBasePath(logoSrc)}
             alt=""
             width={420}
             height={140}

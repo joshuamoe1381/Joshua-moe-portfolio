@@ -1,5 +1,6 @@
 import { footerLinks } from "@/data/nav";
 import { site } from "@/data/site";
+import { withBasePath } from "@/lib/base-path";
 
 export function Footer() {
   return (
@@ -18,7 +19,7 @@ export function Footer() {
           {footerLinks.map((item) => (
             <a
               key={item.label}
-              href={item.href}
+              href={withBasePath(item.href)}
               target={item.href.startsWith("mailto:") ? undefined : "_blank"}
               rel={
                 item.href.startsWith("mailto:")

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { AbstractPlaceholder } from "@/components/ui/AbstractPlaceholder";
 import { cn } from "@/lib/cn";
+import { withBasePath } from "@/lib/base-path";
 
 type MediaFrameProps = {
   src?: string;
@@ -44,8 +45,8 @@ export function MediaFrame({
               "absolute inset-0 h-full w-full object-cover",
               imageClassName,
             )}
-            src={videoSrc}
-            poster={src}
+            src={withBasePath(videoSrc)}
+            poster={withBasePath(src)}
             muted
             playsInline
             loop

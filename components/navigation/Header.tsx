@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { navItems } from "@/data/nav";
 import { site } from "@/data/site";
 import { cn } from "@/lib/cn";
+import { withBasePath } from "@/lib/base-path";
 
 function NavLink({
   href,
@@ -30,7 +31,7 @@ function NavLink({
   if (external || href.includes("#")) {
     return (
       <a
-        href={href}
+        href={withBasePath(href)}
         onClick={onClick}
         target={external && !href.startsWith("mailto:") ? "_blank" : undefined}
         rel={
